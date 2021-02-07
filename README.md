@@ -8,6 +8,22 @@ You can use this to implement a persistent counter. It also uses some SQLite syn
 
 ## Installation
 
+```
+pip install litecounter
+```
+
+**IMPORTANT**: This package uses SQLite's [UPSERT](https://sqlite.org/lang_upsert.html) statment so it needs to run at least with SQLite version 3.24.0 (released 2018-06-04).
+
+If you need to run the latest version, you can use [pysqlite3](https://github.com/coleifer/pysqlite3) and override `sqlite3`
+
+```python
+import pysqlite3 # pre-built if you install pysqlite3-binary
+import sys
+sys.modules['sqlite3'] = pysqlite3 
+```
+
+In near releases you will be able to use a connection instead of a just the database name to create the counter, so you won't need to override `sqlite3` globally.
+
 ## Examples
 
 The examples are taken from the tests in [`tests.ipynb`](./tests.ipynb)
