@@ -17,4 +17,4 @@ jobs:
         run: |
           pip install nbdev
       - name: runtests
-        run: nbdev_test_nbs --fname tests.ipynb --timing
+        run: nbdev_test_nbs --fname tests.ipynb --timing True
