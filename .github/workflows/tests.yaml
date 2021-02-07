@@ -15,6 +15,6 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: pip deps
         run: |
-          pip install nbdev
+          pip install jupyterlab nbconvert
       - name: runtests
-        run: nbdev_test_nbs --fname tests.ipynb --timing True
+        run: jupyter nbconvert --execute tests.ipynb
