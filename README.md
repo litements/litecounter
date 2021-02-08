@@ -4,7 +4,7 @@
 
 ## Why?
 
-You can use this to implement a persistent counter. It also uses some SQLite syntax to initialize keys to `0` when the counter starts on them., just as if you had a `collections.defaultdict` where the default is `0`.
+You can use this to implement a persistent counter. It also uses some SQLite syntax to initialize keys to `0` when the counter starts on them, just as if you had a `collections.defaultdict` where the default is `0`.
 
 ## Installation
 
