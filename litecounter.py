@@ -2,7 +2,7 @@ import sqlite3
 from contextlib import contextmanager
 import pprint
 
-__version__ = "0.1"
+__version__ = "0.1.1"
 
 # SQLite works better in autocommit mode when using short DML (INSERT / UPDATE / DELETE) statements
 # source: https://charlesleifer.com/blog/going-fast-with-sqlite-and-python/
@@ -22,11 +22,7 @@ def transaction(conn: sqlite3.Connection):
 
 class SQLCounter:
     def __init__(
-        self,
-        dbname,
-        check_same_thread=False,
-        fast=True,
-        **kwargs,
+        self, dbname, check_same_thread=False, fast=True, **kwargs,
     ):
         self.dbname = dbname
         self.conn = sqlite3.connect(

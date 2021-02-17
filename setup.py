@@ -23,5 +23,5 @@ setuptools.setup(
     url="https://github.com/litements/litecounter",
     py_modules=["litecounter"],
     classifiers=["Operating System :: OS Independent",],
-    python_requires=">=3.7",
+    python_requires=">=3.6",
 )
